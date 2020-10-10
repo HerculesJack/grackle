@@ -6,7 +6,7 @@
 #
 # AUTHOR:      He Jia (hejia@princeton.edu)
 #
-# DATE:        2020-08-31
+# DATE:        2020-10-10
 #
 #=======================================================================
 
@@ -14,8 +14,16 @@ MACH_FILE  = Make.mach.tigercpu
 MACH_TEXT  = tigercpu
 MACH_VALID = 1
 
-#	please load these modules:
-#	module load intel/19.1/64/19.1.1.217 hdf5/intel-16.0/1.8.16
+#    please load these modules:
+#        module load intel/19.1/64/19.1.1.217 hdf5/intel-16.0/1.8.16
+#    building:
+#        ./configure
+#        cd src/clib
+#        make machine-tigercpu
+#        make show-config
+#        make opt-high
+#        make
+#        make install
 
 #-----------------------------------------------------------------------
 # Install paths (local variables)
@@ -44,7 +52,7 @@ MACH_DEFINES   = -DLINUX -DH5_USE_16_API
 # Compiler flag settings
 #-----------------------------------------------------------------------
 
-MACH_OMPFLAGS = -fopenmp
+MACH_OMPFLAGS = # -fopenmp
 MACH_CPPFLAGS = -P -traditional
 MACH_CFLAGS   = 
 MACH_CXXFLAGS = 
